@@ -252,12 +252,6 @@ public class Global {
      * glide 加载图片
      */
     public static void displayImage(String imgUrl, ImageView target, int defaultValue) {
-        if (imgUrl != null) {
-            if (imgUrl.contains("http://") || imgUrl.contains("https://")) {
-            } else {
-                imgUrl = HttpApis.HOST_API + imgUrl;
-            }
-        }
         final RequestOptions options = new RequestOptions();
         options.centerCrop()
                 .error(defaultValue);
@@ -269,12 +263,6 @@ public class Global {
      * glide 加载图片
      */
     public static void displayImage(String imgUrl, ImageView target) {
-        if (imgUrl != null) {
-            if (imgUrl.contains("http://") || imgUrl.contains("https://")) {
-            } else {
-                imgUrl = HttpApis.HOST_API + imgUrl;
-            }
-        }
         final RequestOptions options = new RequestOptions();
         options.centerCrop()
                 .error(img_error_default);
@@ -285,12 +273,6 @@ public class Global {
      * glide 加载图片
      */
     public static void displayImage(String imgUrl, ImageView target, RequestOptions options) {
-        if (imgUrl != null) {
-            if (imgUrl.contains("http://") || imgUrl.contains("https://")) {
-            } else {
-                imgUrl = HttpApis.HOST_API + imgUrl;
-            }
-        }
         Glide.with(sContext).load(imgUrl).apply(options).into(target);
     }
 
@@ -299,12 +281,6 @@ public class Global {
      * glide 加载图片
      */
     public static void displayImage(String imgUrl, ImageView target, float thumbnail) {
-        if (imgUrl != null) {
-            if (imgUrl.contains("http://") || imgUrl.contains("https://")) {
-            } else {
-                imgUrl = HttpApis.HOST_API + imgUrl;
-            }
-        }
         final RequestOptions options = new RequestOptions();
         options.centerCrop()
                 .error(img_error_default);
@@ -315,12 +291,6 @@ public class Global {
      * glide 加载图片
      */
     public static void displayImageBg(String imgUrl, ImageView target) {
-        if (imgUrl != null) {
-            if (imgUrl.contains("http://") || imgUrl.contains("https://")) {
-            } else {
-                imgUrl = HttpApis.HOST_API + imgUrl;
-            }
-        }
         final RequestOptions options = new RequestOptions();
         options.centerCrop()
                 .error(getColor(R.color.c_F6F9FA));
